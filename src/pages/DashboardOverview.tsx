@@ -147,6 +147,29 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Intent Workflows */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a href="#/intents/neue-beteiligung" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow no-underline">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+            <IconCoin size={20} className="text-primary" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="font-semibold text-foreground truncate">Neue Beteiligung aufbauen</div>
+            <div className="text-sm text-muted-foreground line-clamp-2">Unternehmen auswählen, Personen verknüpfen, Beteiligung erfassen und erstes Gremium planen</div>
+          </div>
+          <IconChevronRight size={18} className="text-muted-foreground shrink-0" />
+        </a>
+        <a href="#/intents/termin-vorbereiten" className="flex items-center gap-4 bg-card border border-border border-l-4 border-l-primary rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow no-underline">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+            <IconCalendar size={20} className="text-primary" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="font-semibold text-foreground truncate">Termin vorbereiten</div>
+            <div className="text-sm text-muted-foreground line-clamp-2">Gremiumstermin auswählen, Teilnehmer bestätigen, Dokumente verknüpfen und Notizen erfassen</div>
+          </div>
+          <IconChevronRight size={18} className="text-muted-foreground shrink-0" />
+        </a>
+      </div>
       {/* KPI Row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard

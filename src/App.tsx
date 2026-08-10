@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import PersonenPage from '@/pages/PersonenPage';
 import UnternehmenPage from '@/pages/UnternehmenPage';
@@ -23,6 +22,8 @@ import PublicFormNotizen from '@/pages/public/PublicForm_Notizen';
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const NeueBeteiligungPage = lazy(() => import('@/pages/intents/NeueBeteiligungPage'));
+const TerminVorbereitenPage = lazy(() => import('@/pages/intents/TerminVorbereitenPage'));
 // </custom:imports>
 
 export default function App() {
@@ -41,7 +42,7 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="personen" element={<PersonenPage />} />
                 <Route path="unternehmen" element={<UnternehmenPage />} />
                 <Route path="beteiligungen" element={<BeteiligungenPage />} />
@@ -50,6 +51,8 @@ export default function App() {
                 <Route path="notizen" element={<NotizenPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/neue-beteiligung" element={<Suspense fallback={null}><NeueBeteiligungPage /></Suspense>} />
+                <Route path="intents/termin-vorbereiten" element={<Suspense fallback={null}><TerminVorbereitenPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
