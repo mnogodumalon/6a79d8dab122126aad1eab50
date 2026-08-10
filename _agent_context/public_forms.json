@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "personen",
+      "app_id": "6a79d8a60736c3a4a7d1e59f",
+      "path": "/rest/apps/6a79d8a60736c3a4a7d1e59f/records",
+      "allowed_fields": [
+        "unternehmen",
+        "vorname",
+        "nachname",
+        "email",
+        "telefon",
+        "rolle",
+        "linkedin",
+        "notizen_person"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Personen — Formular"
+    },
+    {
+      "entity": "unternehmen",
+      "app_id": "6a79d8abade761cee4db4fd8",
+      "path": "/rest/apps/6a79d8abade761cee4db4fd8/records",
+      "allowed_fields": [
+        "ansprechpartner",
+        "unternehmensname",
+        "branche",
+        "rechtsform",
+        "gruendungsjahr",
+        "website",
+        "stadt",
+        "land",
+        "status",
+        "kurzprofil",
+        "notizen_unternehmen"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Unternehmen — Formular"
+    },
+    {
+      "entity": "beteiligungen",
+      "app_id": "6a79d8abfa6a40eb0b31e8a2",
+      "path": "/rest/apps/6a79d8abfa6a40eb0b31e8a2/records",
+      "allowed_fields": [
+        "beteiligte_personen",
+        "beteiligungsart",
+        "anteil_prozent",
+        "investiertes_kapital",
+        "aktueller_wert",
+        "eintrittsdatum",
+        "exitdatum",
+        "bewertung",
+        "notizen_beteiligung"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Beteiligungen — Formular"
+    },
+    {
+      "entity": "gremien_&_termine",
+      "app_id": "6a79d8ac29dbb6ecfa9f3968",
+      "path": "/rest/apps/6a79d8ac29dbb6ecfa9f3968/records",
+      "allowed_fields": [
+        "unternehmen",
+        "teilnehmer",
+        "titel",
+        "terminart",
+        "datum_uhrzeit",
+        "ort",
+        "wiederkehrend",
+        "wiederholungsintervall",
+        "agenda",
+        "notizen_termin"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Gremien & Termine — Formular"
+    },
+    {
+      "entity": "dokumente",
+      "app_id": "6a79d8ac54dfdf327d8f29f9",
+      "path": "/rest/apps/6a79d8ac54dfdf327d8f29f9/records",
+      "allowed_fields": [
+        "titel",
+        "dokumenttyp",
+        "externer_link",
+        "datum_dokument",
+        "beschreibung",
+        "notizen_dokument"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Dokumente — Formular"
+    },
+    {
+      "entity": "notizen",
+      "app_id": "6a79d8ac812ce284dbd988c6",
+      "path": "/rest/apps/6a79d8ac812ce284dbd988c6/records",
+      "allowed_fields": [
+        "inhalt",
+        "kategorie",
+        "erstellt_am",
+        "titel"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Notizen — Formular"
+    }
+  ]
+}

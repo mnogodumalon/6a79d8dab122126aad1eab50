@@ -1,0 +1,20 @@
+- Personen (personen): unternehmen[multipleapplookup/select], vorname[string/text], nachname[string/text], email[string/email], telefon[string/tel], rolle[lookup/select], linkedin[string/url], notizen_person[string/textarea]
+  → unternehmen links to app_id 6a79d8abade761cee4db4fd8
+- Unternehmen (unternehmen): ansprechpartner[multipleapplookup/select], unternehmensname[string/text], branche[lookup/select], rechtsform[lookup/select], gruendungsjahr[number], website[string/url], stadt[string/text], land[string/text], status[lookup/radio], kurzprofil[string/textarea], notizen_unternehmen[string/textarea]
+  → ansprechpartner links to app_id 6a79d8a60736c3a4a7d1e59f
+- Beteiligungen (beteiligungen): unternehmen[applookup/select], beteiligte_personen[multipleapplookup/select], beteiligungsart[lookup/select], anteil_prozent[number], investiertes_kapital[number], aktueller_wert[number], eintrittsdatum[date/date], exitdatum[date/date], bewertung[string/textarea], notizen_beteiligung[string/textarea]
+  → unternehmen links to app_id 6a79d8abade761cee4db4fd8
+  → beteiligte_personen links to app_id 6a79d8a60736c3a4a7d1e59f
+- Gremien & Termine (gremien_&_termine): unternehmen[multipleapplookup/select], teilnehmer[multipleapplookup/select], titel[string/text], terminart[lookup/select], datum_uhrzeit[date/datetimeminute], ort[string/text], wiederkehrend[bool], wiederholungsintervall[lookup/radio], agenda[string/textarea], notizen_termin[string/textarea]
+  → unternehmen links to app_id 6a79d8abade761cee4db4fd8
+  → teilnehmer links to app_id 6a79d8a60736c3a4a7d1e59f
+- Dokumente (dokumente): titel[string/text], dokumenttyp[lookup/select], datei[file], externer_link[string/url], datum_dokument[date/date], beschreibung[string/textarea], notizen_dokument[string/textarea], unternehmen[applookup/select], termin[applookup/select], bereitgestellt_von[applookup/select]
+  → unternehmen links to app_id 6a79d8abade761cee4db4fd8
+  → termin links to app_id 6a79d8ac29dbb6ecfa9f3968
+  → bereitgestellt_von links to app_id 6a79d8a60736c3a4a7d1e59f
+- Notizen (notizen): inhalt[string/textarea], kategorie[lookup/select], erstellt_am[date/date], unternehmen[applookup/select], beteiligung[applookup/select], termin[applookup/select], titel[string/text], dokument[applookup/select], person[applookup/select]
+  → unternehmen links to app_id 6a79d8abade761cee4db4fd8
+  → beteiligung links to app_id 6a79d8abfa6a40eb0b31e8a2
+  → termin links to app_id 6a79d8ac29dbb6ecfa9f3968
+  → dokument links to app_id 6a79d8ac54dfdf327d8f29f9
+  → person links to app_id 6a79d8a60736c3a4a7d1e59f
